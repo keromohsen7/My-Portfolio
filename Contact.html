@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kirolos Mohsen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <canvas id="starsCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Kirolos<span class="accent">Mohsen</span></a>
+      <div class="d-flex align-items-center gap-3">
+        <button id="themeToggle" class="theme-btn"><i class="fas fa-moon" id="themeIcon"></i></button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="tog-line"></span><span class="tog-line"></span><span class="tog-line"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container text-center">
+      <p class="sec-tag">Let's talk</p>
+      <h1 class="page-title">Get In <span class="accent">Touch</span></h1>
+      <div class="title-line mx-auto"></div>
+    </div>
+  </div>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="row g-5 justify-content-center">
+
+        <!-- Info -->
+        <div class="col-lg-4">
+          <p class="sec-tag mb-3">Find Me</p>
+
+          <div class="contact-item">
+            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <p class="c-label">Email</p>
+              <!-- Change to your real email -->
+              <a href="mailto:kirolos@email.com" class="c-val">kero.mohsen774@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="c-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <p class="c-label">Phone</p>
+              <!-- Change to your real number -->
+              <a href="tel:+201234567890" class="c-val">+201285292705</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <p class="c-label">Location</p>
+              <span class="c-val">Egypt</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="sec-tag mb-3">Social</p>
+            <div class="d-flex gap-3">
+              <!-- Change href="#" to your real links -->
+              <a href="#" class="s-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="s-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-7">
+          <div class="form-card">
+
+            <!-- Success message -->
+            <div id="successMsg" class="success-alert d-none">
+              <i class="fas fa-check-circle me-2"></i>
+              Message sent! I'll get back to you soon.
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+
+                <div class="col-sm-6">
+                  <label class="f-label">Full Name</label>
+                  <input type="text" id="name" class="f-input" placeholder="Your full name" autocomplete="off" />
+                  <p class="f-err" id="nameErr"></p>
+                </div>
+
+                <div class="col-sm-6">
+                  <label class="f-label">Email</label>
+                  <input type="text" id="email" class="f-input" placeholder="your@email.com" autocomplete="off" />
+                  <p class="f-err" id="emailErr"></p>
+                </div>
+
+                <div class="col-12">
+                  <label class="f-label">Subject</label>
+                  <input type="text" id="subject" class="f-input" placeholder="What is this about?"
+                    autocomplete="off" />
+                  <p class="f-err" id="subjectErr"></p>
+                </div>
+
+                <div class="col-12">
+                  <label class="f-label">Message</label>
+                  <textarea id="message" class="f-input" rows="5" placeholder="Write your message..."></textarea>
+                  <p class="f-err" id="messageErr"></p>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn-main w-100">
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p class="footer-logo">Kirolos<span class="accent">Mohsen</span></p>
+      <div class="footer-socials">
+        <a href="#" class="s-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="s-icon"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Kirolos Mohsen. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
